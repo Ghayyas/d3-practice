@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>D3 Select and append</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+   
+</head>
+<body>
+        <p>This is para</p>
+
+ <script>
+        var paragraphs = document.getElementsByTagName("p");
+        for (var i = 0; i < paragraphs.length; i++) {
+        var paragraph = paragraphs.item(i);
+        paragraph.style.setProperty("color", "red", null);
+        }
+        d3.select('p').text('hello world');
+
+        //append
+
+        d3.select('body').append('p').text('this is new para');
+        console.log(d3);
+    </script>
+</body>
+</html>
